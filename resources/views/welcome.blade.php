@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="grid grid-cols-2 bg-red-300 mx-36"> <!--content wrapper-->
+    <div class="grid grid-cols-2 bg-red-300 md:mx-36"> <!--content wrapper-->
         <div class="col-span-2 bg-yellow-100 my-8">
             <h1 class="text-4xl font-semibold">Notes App</h1>
         </div>
@@ -81,7 +81,20 @@
             </div>
 
             <div class="col-span-3 bg-pink-300">
-                <h1>2222222222</h1>
+                <div>
+                    <input type="text" value="2222" class="text-4xl w-full">
+                </div>
+                <div>
+                    <textarea name="" id="" cols="160" rows="18" class="w-full"></textarea>
+                </div>         
+                <div class="flex justify-end">
+                    <div class="mx-2">
+                        <button>delete</button>
+                    </div>
+                    <div class="mx-2">
+                        <button>update</button>
+                    </div>                    
+                </div>       
             </div>
 
         </main>
