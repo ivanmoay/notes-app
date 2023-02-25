@@ -1,16 +1,10 @@
 <template>
-    <div class="card shadow-lg hover:scale-105 transition ease-out duration-200 h-36 bg-slate-400 rounded m-2 p-2">
+    <div class="card shadow-lg hover:scale-105 transition ease-out duration-200 h-36 bg-yellow-600 rounded m-2 p-2">
         <div>
-            <h1 class="text-2xl font-semibold">Title</h1>
+            <h1 class="text-2xl font-semibold">{{ note.title }}</h1>
             <div>
                 <p>
-                    text text text text1
-                    text text text text2
-                    text text text text3
-                    text text text text4
-                    text text text text5
-                    text text text text6
-                    text text text text7
+                    {{ snippet }}
                 </p>                            
             </div>
             <div class="text-right">
@@ -21,5 +15,16 @@
 </template>
 
 <script>
+import { computed } from 'vue'
 
+export default{
+    props: ['note'],
+    setup(props){
+        const snippet = computed(()=>{
+            return props.note.note.substring(0, 100) + '...'
+        })
+
+        return {snippet}
+    }
+}
 </script>
